@@ -19,17 +19,17 @@ public class Book extends Product {
         this.bookAuthor = author;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        if (!super.equals(o)) return false;
-        Book book = (Book) o;
-        return Objects.equals(bookAuthor, book.bookAuthor);
-    }
+//    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        if (o == null || getClass() != o.getClass()) return false;
+//        if (!super.equals(o)) return false;
+//        Book book = (Book) o;
+//        return Objects.equals(bookAuthor, book.bookAuthor);
+//    }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(super.hashCode(), bookAuthor);
-    }
+//    @Override
+//    public int hashCode() {
+//        return Objects.hash(super.hashCode(), bookAuthor);
+//    }
 }
