@@ -9,14 +9,10 @@ import java.util.Objects;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-
 public class Product {
     private int id;
     private String name;
-
-    public boolean matches(String search) {
-        return name.contains(search);
-    }
+    private int cost;
 
     @Override
     public boolean equals(Object o) {
@@ -29,13 +25,5 @@ public class Product {
     @Override
     public int hashCode() {
         return Objects.hash(id, name);
-    }
-
-    @Override
-    public String toString() {
-        return "Product{" +
-                "id=" + id +
-                ", name='" + name +
-                '}';
     }
 }

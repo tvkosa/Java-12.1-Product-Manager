@@ -18,29 +18,16 @@ public class ProductRepository {
         return items;
     }
 
-    public Product findById(int idToFind) {
-        for (Product item : items) {
-            if (item.getId() == idToFind) {
-                return item;
-            }
-        }
-        return null;
-    }
-
-    public Product removeById(int idToRemove) {
-        if (idToRemove > items.length) {
-            System.out.println("Не найден продукт с ID");
-            return null;
-        }
+    public void removeById(int id) {
         int length = items.length - 1;
         Product[] tmp = new Product[length];
         int index = 0;
         for (Product item : items) {
-            if (item.getId() != idToRemove) {
+            if (item.getId() != id) {
                 tmp[index] = item;
                 index++;
             }
         }
-        return null;
+        items = tmp;
     }
 }
